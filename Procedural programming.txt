@@ -1,0 +1,50 @@
+ALGORITHM exercice
+VAR
+   
+    ps : FLOAT
+    arr : ARRAY_OF integer[n][2];
+   
+   
+BEGIN
+
+
+    PROCEDURE dot_product(v1:ARRAY_OF integer[],v2:ARRAY_OF integer[],var ps)
+    VAR
+   
+    BEGIN
+    ps := v1[0] * v2[0] + v1[1] * v2[1];
+       
+    END
+ FOR i FROM 0 TO n STEP 1  DO
+        FOR j FROM 0 TO n STEP 1  DO
+            dot_product (arr[i],arr[j],ps)
+            IF (ps ==0) THEN
+                write(i + " et " +j + " sont orthogonaux")
+            END_IF
+        END_FOR
+    END_FOR
+
+
+
+
+    FUNCTION dot_product1(v1:ARRAY_OF integer[],v2:ARRAY_OF integer[]) : float
+    VAR
+   
+    ps : float;
+    BEGIN
+        ps := v1[0] * v2[0] + v1[1] * v2[1];
+        RETURN ps ;
+    END
+
+
+FOR i FROM 0 TO n STEP 1  DO
+        FOR j FROM 0 TO n STEP 1  DO
+           
+            IF (dot_product1 (arr[i],arr[j]) ==0) THEN
+                write(i + " et " +j + " sont orthogonaux")
+            END_IF
+        END_FOR
+    END_FOR
+   
+END
+
